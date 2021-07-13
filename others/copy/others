@@ -1,0 +1,136 @@
+decryption :
+sudo cryptsetup luksOpen /dev/sda1 crypted_sda1
+
+
+
+mount cryptsetup :
+sudo mount /dev/mapper/crypted_sda1 /mnt
+
+
+
+unmount cryptsetup :
+sudo umount /dev/mapper/crypted_sdb1
+
+
+
+list disks :
+lsblk -o name,mountpoint,label,size,uuid
+
+
+
+mount : 
+sudo mount /dev/sdb1 /media
+
+
+
+unmount :
+sudo umount /dev/sdb1
+
+
+
+start apache2 :
+sudo service apache2 start
+
+
+
+stop apache2 :
+sudo service apache2 stop
+
+
+
+restart apache2 :
+sudo service apache2 restart
+
+
+
+status apache2 :
+sudo service apache2 status
+
+
+
+create a partition :
+sudo fdisk /dev/sdb
+    d
+    w
+
+    n
+    enter
+    enter
+    enter
+    enter
+    w
+
+
+
+format to ext4 :
+sudo mkfs.ext4 /dev/sdb1
+
+
+
+format to ntfs :
+sudo mkfs.ntfs /dev/sdb1
+
+
+
+zip file :
+zip file.zip file
+
+
+
+zip folder :
+zip -r file.zip folder
+
+
+
+tar :
+tar -cvf file.tar file
+
+
+
+tar.gz :
+tar -cvzf file.tar.gz file
+
+
+
+tar.bz2 :
+tar -cvjf file.tar.bz2 file
+
+
+
+tar.xz :
+tar -cJf file.tar.xz files
+
+
+
+screenshot :
+scrot screenshot.png --delay 5
+
+
+
+dd :
+sudo dd if=devuan_beowulf_3.0.0_amd64-netinstall.iso of=/dev/sdb status=progress
+
+
+permission :
+sudo chown -R ahmad /path
+
+
+
+install .deb packages :
+sudo dpkg -i file.deb
+sudo apt install -f
+
+
+
+bluetooth :
+on :
+    sudo rfkill unblock bluetooth
+    bluetoothctl
+    agent KeyboardOnly
+    default-agent
+    power on
+    scan on
+    pair 00:12:34:56:78:90
+    connect 00:12:34:56:78:90
+off :
+    sudo rfkill block bluetooth

@@ -1,0 +1,2 @@
+xsetroot -solid '#c5dceb' &&
+exec sowm

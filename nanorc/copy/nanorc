@@ -1,0 +1,35 @@
+include "/usr/share/nano/*.nanorc"
+bind ^c copytext main
+bind ^x cut main
+bind ^v uncut main
+bind ^z undo main
+bind ^y redo main
+bind ^f whereis main
+bind ^h replace main
+bind ^g findnext main
+bind ^j gotoline main
+bind ^l justify main
+bind ^q exit main
+bind ^o insert main
+bind ^p prevword main
+bind ^n nextword main
+bind ^b firstline main
+bind ^e lastline main
+set nonewlines
+set tabsize 4
+set constantshow
+set morespace
+set casesensitive
+set positionlog
+set smooth
+set softwrap
+set nowrap
+set suspend
+set tabstospaces
+set nohelp
+set errorcolor black,red
+set selectedcolor black,white
+set titlecolor black,magenta
+set statuscolor black,cyan
+set keycolor red
+set functioncolor blue
